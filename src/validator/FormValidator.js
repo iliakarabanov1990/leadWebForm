@@ -8,7 +8,7 @@ export class FormValidator{
 
         this.#validationMap = new Map();
         for(const [key, value] of Object.entries(configuration) ){
-            this.#validationMap.set(key, composeValidators(...value));
+            this.#validationMap.set(key, composeValidators(value));
         }
     }
 

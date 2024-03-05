@@ -7,7 +7,7 @@
     <title>Interest in the product</title>
 </head>
 <body>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>  
 
     <div class="form-lead">
       <button onclick="document.getElementById('id-form-lead').style.display='block'" class="button-сontact">Send us contact information</button>                
@@ -26,7 +26,7 @@
           <input type=hidden name='captcha_settings' value='{"keyname":"LeadFormSC","fallback":"true","orgId":"00DF9000000eQDg","ts":""}'>
           <input type=hidden name="oid" value="00DF9000000eQDg">
           <input type=hidden name="retURL" value="https://sclaboratory-1b253.web.app/confirmation">
-            
+          
           <label for="company">Company Name</label><input id="company" maxlength="40" name="company" size="20" type="text" placeholder="input company name" class="my-input-class input-text"/> 
           <ul id = "companyError" class="error-list"></ul>
           <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="input first name" class="my-input-class input-text"/>
@@ -76,7 +76,7 @@
           <br>
           <div class="g-recaptcha" data-sitekey="6LddZXQpAAAAAHcx09cGa97tbvegDeKINhcLph9o"></div><br>
           <div class="submit">
-            <button type="submit" name="btnSubmit" class="submit-button">Submit</button>
+            <button type="submit" name="btnSubmit" class="submit-button" disabled>Submit</button>
             <ul id = "submitError" class="error-list"></ul>
           </div>
         </div>

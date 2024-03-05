@@ -11,7 +11,7 @@ export const validPhone = (value) =>{
 } 
 
 export const validProduct = (value) =>{
-    return /--choose product--/.test(value) ? {requiredText: "product is filled in incorrectly"} : null;
+    return value === '--choose product--' ? {requiredText: "product is filled incorrectly"} : null;
 }
 
 

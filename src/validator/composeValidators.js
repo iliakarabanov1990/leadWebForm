@@ -1,4 +1,4 @@
-export function composeValidators(...validators){
+export function composeValidators(validators){
     return (value) => {
         for(const validator of validators){
             const result = validator(value);
@@ -6,7 +6,6 @@ export function composeValidators(...validators){
             if (result){
                 return result;
             }
-
         }
 
         return null;

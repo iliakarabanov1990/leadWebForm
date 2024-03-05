@@ -22,7 +22,7 @@ const userDataValidator = new FormValidator({
         last_name: String(new FormData(formLead).get("last_name")).trim(),
         email: String(new FormData(formLead).get("email")).trim(),  
         phone: String(new FormData(formLead).get("phone")).trim(),
-        '00NF900000776WP': String(new FormData(formLead).get("product")).trim(),
+        '00NF900000776WP': String(new FormData(formLead).get("00NF900000776WP")).trim(),
       };
   
       const errors = userDataValidator.validate(userData);
@@ -36,14 +36,15 @@ const userDataValidator = new FormValidator({
   });
 
   function timestamp() { 
-    var response = document.getElementById("g-recaptcha-response"); 
+    var response = document.getElementById('g-recaptcha-response'); 
     if (response == null || response.value.trim() == "") {
         var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
-        elems["ts"] = JSON.stringify(new Date().getTime());
-        document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+        elems['ts'] = JSON.stringify(new Date().getTime());
+        document.getElementsByName('captcha_settings')[0].value = JSON.stringify(elems); 
+        document.querySelector('.submit-button').disabled = true;
     } 
     else{
         document.querySelector('.submit-button').disabled = false;
-        clearInterval(idInt);
+        //clearInterval(idInt);
     }
 } 
